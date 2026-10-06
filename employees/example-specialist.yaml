@@ -1,0 +1,51 @@
+# This is an example employee definition — a template for how to describe a
+# specialist role. Copy this file, rename it, and fill it in for each real
+# role you want Claude to be able to operate as. Delete this example once
+# you've created your own, or keep it around as a reference.
+
+id: example-specialist
+name: Example Specialist
+
+# One paragraph: what this role exists to do, and in what domain/systems.
+purpose: >
+  Describe the domain this role owns — e.g. a specific product area, a set
+  of internal systems, a category of tickets — and what "doing the job well"
+  looks like for this role.
+
+# Concrete, checkable things this role does. These should read like a job
+# description, not a personality description.
+responsibilities:
+  - Work inside specific project repositories or systems (name them)
+  - List the recurring tasks this role performs
+  - Note any investigation, documentation, or validation duties
+  - Note when this role should hand off to another employee
+  - Update the active TASK.md and next action before ending meaningful work
+
+# Where this role is allowed to look for and leave work.
+workspace_access:
+  project_repos: ~/code
+  operational_work: ~/work
+  registry: ~/workspaces.yaml
+
+# The permission block is the most important part of this file. Spell out,
+# system by system, what this role can do unattended vs. what needs your
+# explicit approval vs. what it should never do. Being explicit here is what
+# lets you trust the role to act without checking in on everything.
+permissions:
+  some_system_read: true
+  some_system_write: approval_required
+  production_write: false
+  ticket_tracker_read: true
+  ticket_tracker_write: approval_required
+
+# Skills (under ~/skills) this role is expected to use.
+skills:
+  - create-workspace
+  - update-ticket
+
+# Anything else worth stating explicitly so future-Claude doesn't have to
+# guess: conventions, gotchas, things that look wrong but aren't, standing
+# cautions.
+notes:
+  - State any non-obvious domain conventions here.
+  - State any standing cautions (e.g. "never do X without approval").

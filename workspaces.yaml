@@ -1,0 +1,14 @@
+version: 1
+
+workspaces:
+  # Example entry — delete once you have real workspaces. Keep every entry
+  # in sync with the workspace.yaml inside its own directory (see the
+  # create-workspace skill).
+  EXAMPLE-1:
+    title: Example workspace — replace or delete me
+    type: ticket
+    path: ~/work/EXAMPLE-1-short-name
+    employee: example-specialist
+    jira: EXAMPLE-1
+    status: active
+    next_action: Delete this example entry once you have real workspaces tracked here

@@ -1,0 +1,10 @@
+version: 1
+
+employees:
+  chief-of-staff:
+    file: ~/employees/chief-of-staff.yaml
+
+  # Replace this with your own real roles — copy example-specialist.yaml,
+  # rename it, fill it in, and add an entry here for each one.
+  example-specialist:
+    file: ~/employees/example-specialist.yaml
